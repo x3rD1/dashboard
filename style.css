@@ -13,17 +13,121 @@ body {
     grid-template-columns: 1.08fr 4fr;
     grid-template-rows: .86fr 4fr;
 }
-/* Sidebar components */
+/* SIDEBAR COMPONENTS */
 .sidebar {
     grid-area: 1/1/3/2;
-    background-color: skyblue;
+    background-color: rgb(46, 141, 219);
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 50px 130px 120px;
 }
-
+.navigation, .settings, .title{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    color: white;
+}
+.icon, .branding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.icon {
+    gap: 4.5px;
+    align-items: center;
+}
+.title {
+    margin-top: 10px;
+}
+.title .icon {
+    justify-content: start;
+    margin-top: -1px;
+}
+/* HEADER COMPONENTS */
 .header {
+    display: grid;
+    grid-template-rows: .8fr 1fr;
     background-color: bisque;
 }
+.header-child1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 2px solid blue;
+}
+.search {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    justify-content: start;
+}
+.search-icon {
+    place-self: center;
+}
+input {
+    height: fit-content;
+    width: 93%;
+    align-self: center;
+    margin-left: -10px;
+    border-radius: 16px;
+    border-style: none;
+    background-color: gainsboro;
+}
+.small-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid green;
+}
+.user {
+    width: max-content;
+    font-size: .65rem;
+    font-weight: 600;
+}
+
+.header-child2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid red
+}
+.user-info {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.user-greetings {
+    font-size: .8rem;
+    align-content: center;
+}
+p {
+    font-size: .5rem;
+    font-weight: 600;
+}
+.actions {
+    display: grid;
+    place-items: center;
+    justify-content: end;
+    border: 2px solid lime;
+}
+.buttons {
+    display: flex;
+    height: fit-content;
+    margin-right: 24px;
+    gap: 12px;
+}
+.buttons > * {
+    border-radius: 16px;
+    padding: 4px;
+    width: 3rem;
+    font-size: .5rem;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(23, 131, 233);
+}
+.profile-pic {
+    align-self: center;
+    justify-self: end ;
+    padding-right: 26px;
+}
+
+
 .main-content {
     background-color: azure;
 }
