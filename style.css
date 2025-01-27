@@ -17,7 +17,7 @@ body {
 /* SIDEBAR COMPONENTS */
 .sidebar {
     grid-area: 1/1/3/2;
-    background-color: rgb(46, 141, 219);
+    background-color: #2481e3;
     display: grid;
     grid-template-rows: 80px 220px 200px;
     padding: 12px;
@@ -26,7 +26,12 @@ body {
     display: flex;
     color: white;
     gap: 12px;
-    padding: 7px 0px 0px 26px;
+    padding: 7px 0px 0px 8px;
+}
+.title div img {
+    height: 36px;
+    width: 36px;
+    margin-top: -4px;
 }
 .title > * {
     font-size: 24px;
@@ -34,16 +39,22 @@ body {
 .navigation, .settings {
     display: flex;
     flex-direction: column;
-    gap: 18.5px;
+    gap: 14px;
     color: white;
-    padding: 2px 0px 10px 18.5px;
+    padding: 2px 0px 10px 14px;
 }
 .branding {
     display: flex;
-    gap: 18px;
+    gap: 14px;
 }
 .branding > * {
     font-size: 18px;
+}
+.branding div img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 .branding h6 {
     padding-left: 4px;
@@ -56,12 +67,13 @@ body {
 .header {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: bisque
+    background-color: #f7f7f7;
+    box-shadow: 0px 4px 8px -6px;
+    z-index: 1;
 }
 .header-child1 {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    border: 2px solid blue;
 }
 .search {
     display: grid;
@@ -70,6 +82,12 @@ body {
 }
 .search-icon {
     place-self: center;
+    margin: 6px -12px 0px 0px;
+}
+.search-icon img {
+    height: 20px;
+    width: 20px;
+
 }
 input {
     height: 24px;
@@ -78,16 +96,23 @@ input {
     margin-left: -10px;
     border-radius: 16px;
     border-style: none;
-    background-color: gainsboro;
+    background-color: #ccdded;
 }
 .small-profile {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    border: 2px solid green;
+    gap: 24px;
 }
-.user {
+.small-profile div img {
+    height: 20px;
+    width: 20px;
+}
+.small-profile .small-pic img {
+    height: 36px;
+    width: 36px;
+}
+.small-profile .user {
     width: max-content;
     font-size: 1rem;
     font-weight: 600;
@@ -95,20 +120,23 @@ input {
 .header-child2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 2px solid red;
     padding-left: 32px;
 }
 .user-info {
     display: flex;
-    gap: 16px;
+    /* gap: 16px; */
+}
+.user-info .profile-pic img {
+    height: 56px;
+    width: 56px;
 }
 .user-greetings {
     display: flex;
     flex-direction: column;
-    padding: 6px 0px 0px 16px;
+    padding: 12px 0px 0px 16px;
     font-size: .8rem;
     align-content: center;
-    gap: 1px;
+    gap: 1.5px;
 }
 .user-greetings p {
     font-size: .8rem;
@@ -116,12 +144,12 @@ input {
 }
 .user-greetings .user {
     font-size: 1.2rem;
+    font-weight: 600;
 }
 .actions {
     display: grid;
     padding-top: 8px;
     justify-content: end;
-    border: 2px solid lime;
 }
 .buttons {
     display: flex;
@@ -142,12 +170,12 @@ input {
 .profile-pic {
     align-self: center;
     justify-self: end ;
-    padding-right: 26px;
+    padding-left: 12px;
 }
 
 /* MAIN-CONTENT COMPONENTS */
 .main-content {
-    background-color: azure;
+    background-color: #ccdded;
     min-height: 92.8%;
 }
 .tags {
@@ -156,15 +184,13 @@ input {
     align-items: end;
     height: 48px;
     padding: 12px 130px 2px 12px;
-    border: 2px solid blueviolet;
 }
 .tags p {
     font-size: 1.125rem;
+    font-weight: 600;
 }
 .contents {
     display: flex;
-    background-color: rgb(216, 160, 179);
-    opacity: 0.6;
     min-height: 85%;
     gap: 15px;
     padding: 4px 28px 0 10px;
@@ -180,11 +206,9 @@ input {
 .left-card {
     display: flex;
     flex-direction: column;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    padding: 0px 8px 0px 12px; */
-    padding: 26px 18px 0px 24px;
+    border-left: 6px solid #face0a;
+    border-radius: 8px;
+    padding: 26px 18px 0px 16px;
 }
 .left-card h6 {
     font-size: 1rem;
@@ -194,7 +218,6 @@ input {
 }
 .card-content {
     grid-area: 1/1/5/3;
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,26 +225,28 @@ input {
 }
 .card-content p {
     font-size: .825rem;
-    color: white;
-    padding: 4px;
 }
 .card-icons {
     grid-area: 5/2/7/3;
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: chartreuse;
     height: 36px;
+    gap: 18px;
+}
+.card-icons > img {
+    height: 20px;
+    width: 20px;
 }
 .contents-right {
     display: grid;
     grid-template-rows: 1.1fr .25fr 1.065fr;
     flex-basis: 25.75%;
-    background-color: aqua;
     padding-left: 2px;
 }
 .right-card {
     padding: 10px 12px 0px 12px;
+    border-radius: 8px;
 }
 .announcements {
     display: grid;
@@ -243,7 +268,6 @@ input {
     border-bottom: 1px solid rgb(128,128,128,0.6);
 }
 .trending {
-    background-color: aliceblue;
     padding-bottom: 4px;
     align-self: end;
     font-size: 1.125rem;
@@ -254,8 +278,12 @@ input {
 }
 .trending-items {
     display: flex;
-    gap: 18px;
-    border: 2px solid white;
+    gap: 6px;
+}
+.trending-items .hero img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
 }
 .trending-items p {
     font-size: 12px;
@@ -268,34 +296,33 @@ input {
 }
 .card1 {
     grid-area: 1/1/4/2;
-    background-color: crimson;
+    background-color: #fafbfc;
 }
 .card2 {
     grid-area: 1/2/4/3;
-    background-color: palegreen;
+    background-color: #fafbfc;
 }
 .card3 {
     grid-area: 1/1/2/2;
-    background-color: navajowhite;
+    background-color: #fafbfc;
 }
 .card4 {
     grid-area: 4/1/7/2;
-    background-color: aquamarine;
+    background-color: #fafbfc;
 }
 .card5 {
     grid-area: 4/2/7/3;
-    background-color: royalblue ;
+    background-color: #fafbfc;
 }
 .card6 {
     grid-area: 7/1/10/2;
-    background-color: indigo;
+    background-color: #fafbfc;
 }
 .card7 {
     grid-area: 7/2/10/3;
-    background-color: khaki;
+    background-color: #fafbfc;
 }
 .card8 {
     grid-area: 3/1/4/2;
-    background-color: black;
-    color: white;
+    background-color: #fafbfc;
 }
