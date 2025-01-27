@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    max-width: 60%;
-    width: 100%;
+    width: 80%;
     height: 100%;
     margin: auto;
 }
@@ -192,7 +191,7 @@ input {
 }
 .contents {
     display: flex;
-    min-height: 85%;
+    height: 85%;
     gap: 15px;
     padding: 4px 28px 0 10px;
 }
@@ -246,7 +245,7 @@ input {
     padding-left: 2px;
 }
 .right-card {
-    padding: 10px 12px 0px 12px;
+    padding: 10px 22px 0px 22px;
     border-radius: 8px;
 }
 .announcements {
@@ -256,7 +255,7 @@ input {
     padding-top: 9px;
 }
 .announcements div {
-    padding: 9px 24px 15px 4px;
+    padding: 9px 12px 15px 4px;
 }
 .announcements h6 {
     font-size: .8rem;
